@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="phoneApp">
+    <head>
+        <meta charset="utf-8" />
+        <title>PhoneApp: By Muhammed Salim</title>
+        <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<![endif]-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" media="screen" rel="stylesheet" type="text/css">
+        <link href="css/main-style.css" media="screen" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <main>
+            <header>
+                <div class="container">
+                    <div class="top-nav">
+                        <a class="logo" href="index.html" title="PhoneU Logo">PhoneU</a>
+                        <nav id="main-menu"></nav>
+                    </div>
+                </div>
+            </header>
+          <div ng-view></div>
+            <footer> 
+                <div class="container">
+                    <h3>Footer</h3>
+                    <p><b>By:</b> Muhammed Salim</p>
+                    <p><bold>Email:</bold><a href="mailto:muhammed.a.salim@gmail.com" target="_top">muhammed.a.salim@gmail.com</a></p>
+                </div>
+            </footer>
+        </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://code.angularjs.org/1.3.0-rc.1/angular.min.js"></script>
+        <script src="https://code.angularjs.org/1.3.0-rc.1/angular-route.min.js"></script>
+        <script src="js/jquery.twbsPagination.min.js"></script>
+        <script src="app.js"></script>
+        <script src="services/phonesService.js"></script>
+        <script src="views/phone-list/phones.controller.js"></script>
+        <script src="views/phone-detail/phone-details.controller.js"></script>
+        <script src="views/basket/basket.controller.js"></script>
+        <script src="views/payment/payment.controller.js"></script>
+    </body>
+</html>

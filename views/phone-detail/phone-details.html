@@ -1,0 +1,41 @@
+<article ng-controller="phoneDetailsController" class="phone-details-page">
+    <div class="container">
+        <article class="container-header">
+            <div class="sub-container clearfix">
+                <h3 class="pagination-element">Phone Details</h3>
+            </div>
+        </article>
+        <article class="container-body clearfix">
+            <section class="phone">
+                <h2 class="phone-title">{{phone.name}}</h2>
+                <div class="phone-image">
+                    <img src="./images/iphone_placeholder.png" alt="{{phone.brand + ' ' + phone.name}}">
+                </div>
+                <div class="phone-details">
+                    <section class="phone-brand">
+                        <h3>Brand:</h3>
+                        <p>{{phone.brand}}</p>
+                    </section>
+                    <section class="phone-condition">
+                        <h3>Condition:</h3>
+                        <p>{{phone.condition}}</p>
+                    </section>
+                    <section class="phone-id">
+                        <h3>Phone ID:</h3>
+                        <p>{{phone.id}}</p>
+                    </section>
+                    <section class="phone-price">
+                        <h3>Price:</h3>
+                        <p>{{phone.price}}</p>
+                    </section>
+                    <a href="#/basket/{{phone.id}}" class="buy-btn" title="Basket Button">Buy</a>
+                </div>
+            </section>
+        </article>
+        <article class="container-footer clearfix">
+            <div class="sub-container clearfix">
+                <a href="#/" class="back-btn" title="Back button">back</a>
+            </div>
+        </article>
+    </div>
+</article>

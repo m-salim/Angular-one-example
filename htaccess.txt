@@ -1,0 +1,120 @@
+I have used <article> because they are stand alone
+
+The <article> tag specifies independent, self-contained content.
+
+http://www.w3schools.com/tags/tag_article.asp
+
+An article should make sense on its own and it should be possible to distribute it independently from the rest of the site.
+
+Potential sources for the <article> element:
+
+Forum post
+Blog post
+News story
+Comment
+
+
+
+when you write the code make it self documentd ... the naming convention should explain itself. 
+Only add comments if it needs explaina something in the code.
+
+
+
+
+
+
+
+For Angular JS if you will use any library for example like jQuery, or pure JS
+you will have to add $apply
+for example:
+
+setTimeout(function(){
+
+	$scope.$apply(function(){
+		
+		// do things 
+
+	});
+
+} 3000);
+
+This is because we are going out of the AngularJs framework
+where usually AngulaurJs will do $apply for me 
+
+
+
+
+use ng-cloak on the element if you want to hide the {{the ref}} on loading the page
+
+
+
+
+
+
+
+
+
+
+
+
+var myApp = angular.module('myApp', []);
+
+
+(function(){
+    'user strict';
+    
+    function addNameController ($scope, $timeout, nameService){
+            $scope.name = nameService.firstName + ' ' + nameService.lastName;
+            $timeout(function(){
+               $scope.name = 'Everybody';
+            }, 3000);
+    };
+    addNameController.$inject = ['$scope', '$timeout', 'nameService'];
+    myApp.controller('mainController', addNameController);
+    
+    
+    
+// service
+function nameServiceFunc (){
+    // ussauly we fetch this from a backend server
+    return {
+        firstName: 'Muhammed',
+        lastName: 'Salim'
+    };
+};
+    
+    myApp.service('nameService', nameServiceFunc);
+}());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
